@@ -1,11 +1,11 @@
-#ifndef TRIANGULO_H
-#define TRIANGULO_H
+#ifndef RETANGULO_H
+#define RETANGULO_H
 
 #include <iostream>
 
 #define UNID " u"
 
-class Triangulo{
+class Retangulo{
     private:
         double m_largura;
         double m_altura;
@@ -13,11 +13,11 @@ class Triangulo{
         double m_perimetro;
 
     public:
-        Triangulo( double, double );
-        Triangulo( Triangulo &triangulo );
-        ~Triangulo();
+        Retangulo( double, double );
+        Retangulo( Retangulo &retangulo );
+        ~Retangulo();
 
-        friend std::ostream& operator<< ( std::ostream &o, Triangulo const t );
+        friend std::ostream& operator<< ( std::ostream &o, Retangulo const t );
 
         double getLargura();
         double getAltura();

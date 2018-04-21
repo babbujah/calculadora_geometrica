@@ -14,10 +14,10 @@ Triangulo::~Triangulo(){}
 
 std::ostream& operator<< ( std::ostream &o, Triangulo const t ){
     o << "##### TRIÂNGULO #####" << std::endl <<
-    "-> Largura: " << t.m_largura << std::endl <<
-    "-> Altura: " << t.m_altura << std::endl <<
-    "-> Área: " << t.m_area << std::endl <<
-    "-> Perímetro: " << t.m_perimetro << std::endl;
+    "-> Largura: " << t.m_largura << UNID << std::endl <<
+    "-> Altura: " << t.m_altura << UNID << std::endl <<
+    "-> Área: " << t.m_area << UNID << std::endl <<
+    "-> Perímetro: " << t.m_perimetro << UNID << std::endl;
     return o;
 }
 
@@ -30,9 +30,11 @@ double Triangulo::getAltura(){
 }
 
 double Triangulo::getArea(){
+    m_area = ( m_largura * m_altura )/2;
     return m_area;
 }
 
 double Triangulo::getPerimetro(){
+    m_perimetro = 3 * m_largura;
     return m_perimetro;
 }
