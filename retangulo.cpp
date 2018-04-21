@@ -13,7 +13,7 @@ Retangulo::Retangulo( Retangulo &retangulo ){
 Retangulo::~Retangulo(){}
 
 std::ostream& operator<< ( std::ostream &o, Retangulo const r ){
-    o << "##### RETÂNGULO #####" << std::endl <<
+    o << std::endl << "##### RETÂNGULO #####" << std::endl <<
     "-> Largura: " << r.m_largura << UNID << std::endl <<
     "-> Altura: " << r.m_altura << UNID << std::endl <<
     "-> Área: " << r.m_area << UNID << std::endl <<

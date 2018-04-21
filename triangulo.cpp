@@ -13,7 +13,7 @@ Triangulo::Triangulo( Triangulo &triangulo ){
 Triangulo::~Triangulo(){}
 
 std::ostream& operator<< ( std::ostream &o, Triangulo const t ){
-    o << "##### TRIÂNGULO #####" << std::endl <<
+    o << std::endl << "##### TRIÂNGULO #####" << std::endl <<
     "-> Largura: " << t.m_largura << UNID << std::endl <<
     "-> Altura: " << t.m_altura << UNID << std::endl <<
     "-> Área: " << t.m_area << UNID << std::endl <<

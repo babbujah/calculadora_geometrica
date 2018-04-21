@@ -11,7 +11,7 @@ Circulo::Circulo( Circulo &circulo ){
 Circulo::~Circulo(){}
 
 std::ostream& operator<< ( std::ostream &o, Circulo const c ){
-    o << "##### CÍRCULO #####" << std::endl <<
+    o << std::endl << "##### CÍRCULO #####" << std::endl <<
     "-> Raio: " << c.m_raio << UNID << std::endl <<
     "-> Área: " << c.m_area << UNID << std::endl <<
     "-> Circunferência: " << c.m_circunferencia << UNID << std::endl;
