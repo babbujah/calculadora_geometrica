@@ -2,6 +2,7 @@
 #define RETANGULO_H
 
 #include <iostream>
+//#include <ctype>
 
 #define UNID " u"
 
@@ -14,6 +15,7 @@ class Retangulo{
 
     public:
         Retangulo( double, double );
+        Retangulo( double );
         Retangulo( Retangulo &retangulo );
         ~Retangulo();
 

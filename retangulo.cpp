@@ -3,6 +3,9 @@
 Retangulo::Retangulo( double largura, double altura ): m_largura( largura ),
     m_altura( altura ), m_area( 0 ), m_perimetro( 0 ){}
 
+Retangulo::Retangulo( double largura ): m_largura( largura ),
+    m_altura( largura ), m_area( 0 ), m_perimetro( 0 ){}
+
 Retangulo::Retangulo( Retangulo &retangulo ){
     m_largura = retangulo.getLargura();
     m_altura = retangulo.getAltura();
@@ -13,8 +16,11 @@ Retangulo::Retangulo( Retangulo &retangulo ){
 Retangulo::~Retangulo(){}
 
 std::ostream& operator<< ( std::ostream &o, Retangulo const r ){
-    o << std::endl << "##### RETÂNGULO #####" << std::endl <<
-    "-> Largura: " << r.m_largura << UNID << std::endl <<
+    if( r.m_largura == r.m_altura )
+        o << std::endl << "##### QUADRADO #####" << std::endl;
+    else
+        o << std::endl << "##### RETÂNGULO #####" << std::endl;
+    o << "-> Largura: " << r.m_largura << UNID << std::endl <<
     "-> Altura: " << r.m_altura << UNID << std::endl <<
     "-> Área: " << r.m_area << UNID << std::endl <<
     "-> Perímetro: " << r.m_perimetro << UNID << std::endl;
