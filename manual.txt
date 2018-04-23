@@ -1,0 +1,45 @@
+############### DESCRIÇÃO DO PROGRAMA GEOMETRIA ###############
+NOME
+       geometria - calcula as dimensões de figuras geométicas
+
+SINOPSE
+       geometria [FORMA]... [DADOS]...
+
+DESCRIÇÃO
+       Calcula as dimensões de formas geométricas especificada. As formas
+       geométricas previstas são:
+       - triângulo
+            recebe o valor de largura e altura
+            ./geometria triangulo <largura> <altura>
+
+       - retângulo
+            recebe o valor de largura e altura
+            ./geometria retangulo <largura> <altura>
+
+       - quadrado
+            recebe valor do lado
+            ./geometria quadrado <lado>
+
+       - círculo
+            recebe o valor do raio
+            ./geometria circulo <raio>
+
+       - piramide
+            recebe o valor de lado do quadrado da base e largura
+            e altura do triângulo lateral
+            ./geometria piramide <aresta_base> <altura_triangulo_lateral>
+
+       - cubo
+            recebe o valor de uma aresta do cubo
+            ./geometria cubo <aresta>
+
+       - paralelepipedo
+            recebe o valor da largura, altura e profundidade
+            ./geometria paralelepipedo <largura> <altura> <profundidade>
+
+       - esfera
+            recebe o valor do raio
+            ./geometria esfera <raio>
+ 
+AUTOR
+       Escrito por Bruno César Lopes da Silva.

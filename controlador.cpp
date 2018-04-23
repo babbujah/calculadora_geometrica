@@ -4,10 +4,6 @@ Controlador::Controlador( char* dados[], int qntParametro){
     m_forma = "";
     m_qntParametro = qntParametro;
     run(dados);
-    //cout << "Quantidade arguentos: " << argc << endl;
-    //cout << "Argumento 0: " << dados[0] << endl;
-    //cout << "Argumento 1: " << dados[1] << endl;
-    //cout << "Argumento 2: " << dados[2] << endl;
 }
 
 Controlador::~Controlador(){}
@@ -68,9 +64,9 @@ void Controlador::run(char* dados[]){
 
         }else if( m_forma.compare( "piramide" ) == 0){
             
-            if( m_qntParametro == 5 ){
+            if( m_qntParametro == 4 ){
                 Piramide p( new Retangulo( std::atoi( dados[2] ) ),
-                            new Triangulo( std::atoi( dados[3] ), std::atoi( dados[4] ) ) );
+                            new Triangulo( std::atoi( dados[2] ), std::atoi( dados[3] ) ) );
                 cout << p;
             }else{
                 erroParam();
@@ -102,8 +98,22 @@ void Controlador::run(char* dados[]){
     }
 }
 
+//Orientação pela url https://www.hardware.com.br/comunidade/ler-arquivos/1061210/
 void Controlador::manual(){
-    cout << "Teste" << endl;
+    string linha;
+    std::ifstream arquivo ("manual.txt"); // ifstream = padrão ios:in
+    if (arquivo.is_open())
+    {
+        while (! arquivo.eof() ) //enquanto end of file for false continua
+        {
+        getline (arquivo,linha); // como foi aberto em modo texto(padrão)
+                                //e não binário(ios::bin) pega cada linha
+        cout << linha << endl;
+        }
+        arquivo.close();
+    }
+
+  else cout << "Unable to open file"; 
 }
 
 void Controlador::erroParam(){

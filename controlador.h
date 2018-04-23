@@ -3,6 +3,7 @@
 
 #include <string>
 #include <iostream>
+#include <fstream>
 
 #include "triangulo.h"
 #include "retangulo.h"
@@ -18,7 +19,6 @@ using std::string;
 
 class Controlador{
     private:
-        //char* dados;
         string m_forma;
         int m_qntParametro;
 

@@ -1,3 +1,19 @@
+/** 
+ *  @file    retangulo.cpp
+ *  @author  Bruno César (bczion)
+ *  @date    4/21/2018  
+ *  @version 1.0 
+ *  
+ *  @brief Lab 2, calculos básicos do polígono
+ *
+ *  @section DESCRIÇÃO
+ *  
+ *  Calcula a área e perímetro do polígono,
+ *  a partir de dados fornecidos pelo usuário.
+ *  Imprime os resultados na tela.
+ *  
+ */
+
 #include "retangulo.h"
 
 Retangulo::Retangulo( double largura, double altura ): m_largura( largura ),

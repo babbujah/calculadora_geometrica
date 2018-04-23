@@ -1,3 +1,19 @@
+/** 
+ *  @file    circulo.cpp
+ *  @author  Bruno César (bczion)
+ *  @date    4/21/2018  
+ *  @version 1.0 
+ *  
+ *  @brief Lab 2, calculos básicos do circulo
+ *
+ *  @section DESCRIÇÃO
+ *  
+ *  Calcula a área e circunferência do circulo,
+ *  a partir de dados fornecidos pelo usuário.
+ *  Imprime os resultados na tela.
+ *  
+ */
+
 #include "circulo.h"
 
 Circulo::Circulo( double raio ): m_raio( raio ), m_area( 0 ), m_circunferencia( 0 ){}
