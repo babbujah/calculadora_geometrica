@@ -4,13 +4,10 @@
 #include <iostream>
 #include <cmath>
 
-//#include "retangulo.h"
-
 #define UNID " u.m."
 
 class Paralelepipedo{
     private:
-        //Retangulo * m_base;
         double m_base;
         double m_altura;
         double m_profundidade;
@@ -24,7 +21,6 @@ class Paralelepipedo{
 
         friend std::ostream& operator<< ( std::ostream &o, Paralelepipedo const p );
 
-        //Retangulo* getBase();
         double getBase();
         double getAltura();
         double getProfundidade();

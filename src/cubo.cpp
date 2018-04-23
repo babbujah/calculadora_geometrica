@@ -8,7 +8,9 @@ Cubo::Cubo( Cubo &cubo ){
     m_volume = cubo.getVolume();
 }
 
-Cubo::~Cubo(){}
+Cubo::~Cubo(){
+    delete m_face;
+}
 
 std::ostream& operator<< ( std::ostream &o, Cubo const c ){
     o << std::endl << "##### CUBO #####" << std::endl <<

@@ -10,7 +10,10 @@ Piramide::Piramide( Piramide &piramide ){
     m_volume = piramide.getVolume();
 }
 
-Piramide::~Piramide(){}
+Piramide::~Piramide(){
+    delete m_base;
+    delete m_lado;
+}
 
 std::ostream& operator<< ( std::ostream &o, Piramide const p ){
     o << std::endl << "##### PIRÂMIDE #####" << std::endl <<
