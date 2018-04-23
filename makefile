@@ -37,7 +37,6 @@ PROG = $(BIN)/geometria
 CPPFLAGS = -Wall -pedantic -std=c++11 -I$(INC)
 
 # Lista dos arquivos objeto (.o) que formam o binario/executavel final
-# OBJS = $(OBJ)/sapo.o $(OBJ)/jogosapo.o $(OBJ)/main.o
 OBJS = $(OBJ)/triangulo.o $(OBJ)/retangulo.o $(OBJ)/circulo.o $(OBJ)/piramide.o $(OBJ)/cubo.o $(OBJ)/paralelepipedo.o $(OBJ)/esfera.o $(OBJ)/controlador.o $(OBJ)/main.o
 
 all : $(OBJS)
@@ -50,50 +49,31 @@ debug: all
 
 # Alvo para a construcao do objeto build/main.o
 # Define os arquivos objeto dos quais main.o depende.
-#$(OBJ)/main.o : $(OBJ)/sapo.o $(OBJ)/jogosapo.o 
-#	$(CC) $(CPPFLAGS) -c $(SRC)/main.cpp -o $@
-
-#$(OBJ)/jogosapo.o : $(INC)/jogosapo.h $(OBJ)/sapo.o
-#	$(CC) $(CPPFLAGS) -c $(SRC)/jogosapo.cpp -o $@
-
-#$(OBJ)/sapo.o : $(INC)/sapo.h
-#	$(CC) $(CPPFLAGS) -c $(SRC)/sapo.cpp -o $@
-
-
 $(OBJ)/main.o: $(OBJ)/controlador.o
-	#$(CC) $(CPPFLAGS) -c main.cpp
 	$(CC) $(CPPFLAGS) -c $(SRC)/main.cpp -o $@
 
 $(OBJ)/triangulo.o: $(INC)/triangulo.h
-	#$(CC) $(CPPFLAGS) -c triangulo.cpp
 	$(CC) $(CPPFLAGS) -c $(SRC)/triangulo.cpp -o $@
 
 $(OBJ)/retangulo.o: $(INC)/retangulo.h
-	#$(CC) $(CPPFLAGS) -c retangulo.cpp
 	$(CC) $(CPPFLAGS) -c $(SRC)/retangulo.cpp -o $@
 
 $(OBJ)/circulo.o: $(INC)/circulo.h
-	#$(CC) $(CPPFLAGS) -c circulo.cpp
 	$(CC) $(CPPFLAGS) -c $(SRC)/circulo.cpp -o $@
 
 $(OBJ)/piramide.o: $(INC)/piramide.h $(OBJ)/triangulo.o $(OBJ)/retangulo.o
-	#$(CC) $(CPPFLAGS) -c piramide.cpp
 	$(CC) $(CPPFLAGS) -c $(SRC)/piramide.cpp -o $@
 
 $(OBJ)/cubo.o: $(INC)/cubo.h $(OBJ)/retangulo.o
-	#$(CC) $(CPPFLAGS) -c cubo.cpp
 	$(CC) $(CPPFLAGS) -c $(SRC)/cubo.cpp -o $@
 
 $(OBJ)/paralelepipedo.o: $(INC)/paralelepipedo.h
-	#$(CC) $(CPPFLAGS) -c paralelepipedo.cpp
 	$(CC) $(CPPFLAGS) -c $(SRC)/paralelepipedo.cpp -o $@
 
 $(OBJ)/esfera.o: $(INC)/esfera.h
-	#$(CC) $(CPPFLAGS) -c esfera.cpp
 	$(CC) $(CPPFLAGS) -c $(SRC)/esfera.cpp -o $@
 
 $(OBJ)/controlador.o: $(INC)/controlador.h $(OBJ)/triangulo.o $(OBJ)/retangulo.o $(OBJ)/circulo.o $(OBJ)/piramide.o $(OBJ)/cubo.o $(OBJ)/esfera.o $(OBJ)/paralelepipedo.o
-	#$(CC) $(CPPFLAGS) -c controlador.cpp
 	$(CC) $(CPPFLAGS) -c $(SRC)/controlador.cpp -o $@
 
 # Alvo para a criação do arquivo Doxyfile.

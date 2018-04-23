@@ -5,7 +5,7 @@
 
 #include "retangulo.h"
 
-#define UNID " u"
+#define UNID " u.m."
 
 class Cubo{
     private:

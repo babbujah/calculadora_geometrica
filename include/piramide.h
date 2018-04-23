@@ -6,7 +6,7 @@
 #include "retangulo.h"
 #include "triangulo.h"
 
-#define UNID " u"
+#define UNID " u.m."
 
 class Piramide{
     private:

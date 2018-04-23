@@ -6,7 +6,7 @@
 
 //#include "retangulo.h"
 
-#define UNID " u"
+#define UNID " u.m."
 
 class Paralelepipedo{
     private:

@@ -20,7 +20,7 @@
 
 #include <iostream>
 
-#define UNID " u" /**< constante que define qual a representação da unidade de medida*/
+#define UNID " u.m." /**< constante que define qual a representação da unidade de medida*/
 #define PI 3.1415 /**< define a constante PI = 3.1415*/
 
 class Circulo{
@@ -49,7 +49,7 @@ class Circulo{
         ~Circulo();
 
         /**
-        * @brief Sobrecarga do operador de inserção
+        * @brief Sobrecarga do operador de inserção.
         * @detail imprime na saída padrão as informações do Círculo
         * @param ostream &o operador de inserção
         * @param Circulo c uma instância de circulo
@@ -58,10 +58,19 @@ class Circulo{
         friend std::ostream& operator<< ( std::ostream &o, Circulo const c );
 
         /**
-        * @brief Método getters e setters
+        * @brief Método get de raio
+        * @return Retorna o raio do círculo
         */
         double getRaio();
+        /**
+        * @brief Método get de area
+        * @return Retorna o area do círculo
+        */
         double getArea();
+        /**
+        * @brief Método get de circunferencia
+        * @return Retorna o circunferencia do círculo
+        */
         double getCircunferencia();
 };
 

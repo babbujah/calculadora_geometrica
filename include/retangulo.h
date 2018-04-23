@@ -13,7 +13,7 @@
 #include <iostream>
 //#include <ctype>
 
-#define UNID " u" /**< constante que define qual a representação da unidade de medida*/
+#define UNID " u.m." /**< constante que define qual a representação da unidade de medida*/
 
 class Retangulo{
     private:

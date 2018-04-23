@@ -4,7 +4,7 @@
 #include <iostream>
 #include <cmath>
 
-#define UNID " u"
+#define UNID " u.m."
 #define PI 3.1415
 
 class Esfera{
