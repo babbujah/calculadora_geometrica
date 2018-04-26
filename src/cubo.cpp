@@ -10,6 +10,8 @@ Cubo::Cubo( Cubo &cubo ){
 
 Cubo::~Cubo(){
     delete m_face;
+    m_area = 0;
+    m_volume = 0;
 }
 
 std::ostream& operator<< ( std::ostream &o, Cubo const c ){

@@ -27,6 +27,12 @@ BIN = ./bin
 OBJ = ./build
 DOC = ./doc
 
+# Criando estruturas de diretórios
+MKDIR_P = mkdir -p
+
+# Todos os diretórios da aplicação
+DIR_CRT = $(BIN) $(OBJ) $(DOC)
+
 # Define o nome do binario/executavel final
 PROG = $(BIN)/geometria
 
@@ -34,7 +40,7 @@ PROG = $(BIN)/geometria
 .PHONY: all clean debug doxy doc
 
 # Opcoes de compilacao
-CPPFLAGS = -Wall -pedantic -std=c++11 -I$(INC)
+CPPFLAGS = -g -Wall -pedantic -std=c++11 -I$(INC)
 
 # Lista dos arquivos objeto (.o) que formam o binario/executavel final
 OBJS = $(OBJ)/triangulo.o $(OBJ)/retangulo.o $(OBJ)/circulo.o $(OBJ)/piramide.o $(OBJ)/cubo.o $(OBJ)/paralelepipedo.o $(OBJ)/esfera.o $(OBJ)/controlador.o $(OBJ)/main.o
@@ -50,9 +56,13 @@ debug: all
 # Alvo para a construcao do objeto build/main.o
 # Define os arquivos objeto dos quais main.o depende.
 $(OBJ)/main.o: $(OBJ)/controlador.o
+	#$(MKDIR_P) $(DIR_CRT)
+	#$(RM) $(PROG) $(OBJS)
 	$(CC) $(CPPFLAGS) -c $(SRC)/main.cpp -o $@
 
 $(OBJ)/triangulo.o: $(INC)/triangulo.h
+	$(MKDIR_P) $(DIR_CRT)
+	$(RM) $(PROG) $(OBJS)
 	$(CC) $(CPPFLAGS) -c $(SRC)/triangulo.cpp -o $@
 
 $(OBJ)/retangulo.o: $(INC)/retangulo.h
